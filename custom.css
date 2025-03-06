@@ -1,0 +1,265 @@
+.dark-blue-bg{
+    background-color: #111343;
+}
+.teamBG{
+    background-color: #000c;
+    background-image:-webkit-linear-gradient(270deg, #0000 0%, #0008 100%);
+    background-image: -moz-linear-gradient(270deg, #0000 0%,  #0008 100%);
+    background-image: -ms-linear-gradient(270deg, #0000 0%, #0008 100%)
+}
+
+.team-header-overlay{
+    position: relative;
+    z-index: 1;
+}.team-header-overlay::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    opacity: 0.9; 
+    background-image:-webkit-linear-gradient(90deg, #000d 0%, #0000 90%, #000 100%);
+    background-image: -moz-linear-gradient(90deg, #000d 0%, #0000 90%,  #000 100%);
+    background-image: -ms-linear-gradient(90deg, #000d 0%, #0000 90%,  #000 100%)
+}
+
+.inverse-header-overlay{
+    position: relative;
+    z-index: 1;
+}.inverse-header-overlay::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #c63fa4;
+    opacity: 0.9; 
+    background-image: -moz-linear-gradient(120deg, #eb0028 0%, #505add 0%);
+    background-image: -webkit-linear-gradient(120deg, #eb0028 0%, #505add 0%);
+    background-image: -ms-linear-gradient(120deg, #eb0028 0%, #505add 0%);
+}
+
+
+
+.single-welcome-slide .welcome-text h3{
+    position: relative;
+    z-index: 1;
+    font-weight: 300;
+    font-size: 90px;
+    display: block;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.x-factor{
+    color: rgb(235, 0, 40);
+    font-size: 50px;
+    position: absolute;
+    padding-top: 15px;
+}
+
+.contact-section, .about-section, .speaker-section, .sponsor-section{
+    padding-top: 200px;
+}
+
+.contactButton{
+    padding-top: 40px;
+}
+
+.comingSoon{
+    flex-direction: column;
+}
+
+.textDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.contact-bg{
+    background-image:-webkit-linear-gradient(270deg, #484848 0%, #fff 25%);
+    background-image: -moz-linear-gradient(270deg, #484848 0%, #fff 25%);
+    background-image: -ms-linear-gradient(270deg, #484848 0%, #fff 25%)
+}
+
+.nabarlogo {
+    width: 30%;
+}
+
+.bold-me{
+    font-weight: 700;
+    color: #fff;
+}
+
+.interTypeface{
+    font-family: "Inter", sans-serif;
+    color: #eb0028;
+}
+
+.teamSectionPadding{
+    /* padding: 10px 0px; */
+    text-align: start;
+}
+.aboutCanvasHeading{
+    margin-bottom: 60px;
+}
+
+.footerOverlay{
+    background: url('img/bg-img/footer.svg');
+}
+.single-speaker-area:hover{
+   box-shadow:  0px 0px 50px #eb002888;
+}
+
+.footerLink,.footerLink:visited{
+    color: #9293bc
+}
+.footerLink:hover{
+    color: #eb0028;
+}
+
+.theRed{
+    color: #eb0028;
+}
+.preloaderImg{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    width: 10%;
+}
+
+.nextExplainArea{
+    background: transparent;
+    padding-top: 80vh;
+   
+}
+
+.ticketBGWrapper {
+    transform: rotate(180deg);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+  }
+
+.ticketHeaderArea{
+    /* background: transparent; */
+    padding-top: 30vh;
+    
+   
+}
+.ticketCardHeader{
+    padding-bottom: 5vh;
+}
+
+.nextBG iframe{
+    /* height: 1000px;
+    width: 100%;
+    border: none; */
+    position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:-999999;
+}
+
+.contactP2BG{
+    background: #fff;
+}
+
+.welcomeBG{
+    background: transparent;
+}
+
+.speakerDiv{
+    margin-top: 50vh;
+}
+.blink {
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+    }
+    @keyframes blink-animation {
+        to {
+        visibility: hidden;
+        }
+    }
+    @-webkit-keyframes blink-animation {
+        to {
+        visibility: hidden;
+        }
+  }
+
+.speaker-info-card{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.team-info-card{
+    /* background-color: #fff; */
+    border-radius: 10px;
+    /* padding: 10px; */
+    margin-top: -30px;
+}
+.team-info-card p{
+    color: #fff;
+}
+@media only screen and (min-width: 990px) {
+    .copywrite-text{
+        text-align: start;
+    }
+    
+}
+@media only screen and (max-width: 990px) {
+    .nabarlogo {
+        width: 50%;
+    }
+    .single-welcome-slide .welcome-text h3{
+        font-size: 40px;
+    }
+    .single-welcome-slide .welcome-text h2 {
+        font-size: 50px;
+    }
+    .x-factor{
+        font-size: 20px;
+        padding-top: 10px;
+    }
+    .preloaderImg{
+        width: 40%;
+    }
+}
+@media only screen and (min-width: 767px) and (max-width: 990px) {
+    .nabarlogo {
+        width: 60%;
+    }
+    .single-welcome-slide .welcome-text h3{
+        font-size: 60px;
+    }
+    .x-factor{
+        font-size: 30px;
+        padding-top: 10px;
+    }
+    .preloaderImg{
+        width: 20%;
+    }
+    .breakpoint-on .classynav ul {
+        flex-direction: column;
+        display: flex;
+    }
+
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .nabarlogo {
+        width: 70%;
+    }
+    .single-welcome-slide .welcome-text h3{
+        font-size: 40px;
+    }
+    
+    
+}
