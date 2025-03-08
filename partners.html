@@ -12,6 +12,15 @@
     <link rel="manifest" href="/manifest.json" />
     <title>TEDx Jims Roshini</title>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link href="https://cdn.prod.website-files.com/63e118320fe0876684cc169c/css/tedxmiami.webflow.7857f54c1.min.css" rel="stylesheet" type="text/css">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.theme.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/speakers-style.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 
     <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-71BFNS64QK"></script>
     <script>
@@ -31,90 +40,7 @@
     <link rel="stylesheet" href="/custom.css" />
     <script defer="defer" src="/static/js/main.45a36b3b.js"></script>
     <link href="/static/css/main.3afd2b22.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" crossorigin="" href="./css/index-OdUvp2S7.css">
-    <script type="module" crossorigin="" src="./js/index-YLMZwGQN.js"></script> -->
 </head>
-<style type="text/css">
-    .rfm-marquee-container {
-        overflow-x: hidden;
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        width: var(--width);
-        transform: var(--transform);
-    }
-    
-    .rfm-marquee-container:hover div {
-        animation-play-state: var(--pause-on-hover);
-    }
-    
-    .rfm-marquee-container:active div {
-        animation-play-state: var(--pause-on-click);
-    }
-    
-    .rfm-overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    }
-    
-    .rfm-overlay::before,
-    .rfm-overlay::after {
-        background: linear-gradient(to right, var(--gradient-color), rgba(255, 255, 255, 0));
-        content: "";
-        height: 100%;
-        position: absolute;
-        width: var(--gradient-width);
-        z-index: 2;
-        pointer-events: none;
-        touch-action: none;
-    }
-    
-    .rfm-overlay::after {
-        right: 0;
-        top: 0;
-        transform: rotateZ(180deg);
-    }
-    
-    .rfm-overlay::before {
-        left: 0;
-        top: 0;
-    }
-    
-    .rfm-marquee {
-        flex: 0 0 auto;
-        min-width: var(--min-width);
-        z-index: 1;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
-        animation-play-state: var(--play);
-        animation-delay: var(--delay);
-        animation-direction: var(--direction);
-    }
-    
-    @keyframes scroll {
-        0% {
-            transform: translateX(0%);
-        }
-        100% {
-            transform: translateX(-100%);
-        }
-    }
-    
-    .rfm-initial-child-container {
-        flex: 0 0 auto;
-        display: flex;
-        min-width: auto;
-        flex-direction: row;
-        align-items: center;
-    }
-    
-    .rfm-child {
-        transform: var(--transform);
-    }
-</style>
 
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -161,10 +87,121 @@
             </header>
             <div>
 
+                <style>
+                    .speaker-block {
+                        position: relative;
+                    }
+                    
+                    .overlay-box {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        background: rgba(0, 0, 0, 0.5);
+                        opacity: 0;
+                        transition: opacity 0.3s ease-in-out;
+                    }
+                    
+                    .image-box:hover .overlay-box {
+                        opacity: 1;
+                    }
+                    
+                    .read-more-btn {
+                        display: none;
+                        /* Hidden by default */
+                        background-color: #ffffff;
+                        color: #000;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 5px;
+                        transition: opacity 0.3s ease-in-out;
+                    }
+                    
+                    .image-box:hover .read-more-btn {
+                        display: inline-block;
+                    }
+                    
+                    .ts-speaker-popup-img img {
+                        width: 100%;
+                        height: auto;
+                    }
+                    
+                    .ts-speaker-popup-content {
+                        padding: 20px;
+                    }
+                    
+                    .modal-content {
+                        border-radius: 8px;
+                        overflow: hidden;
+                    }
+                </style>
+                <section class="speakers" id="speakers-section sp-se-4">
+                    <div class="container flex flex-col justify-center items-center gap-y-12" style="padding-top: 45px !important;">
+                        <div class="relative">
+                            <div class="margin" style="height: 55px;">
 
+                            </div>
+                        </div>
+                        <h2 class="c-title-1">
+                            Our<span class="c-span-color-red"> Partners</span>
+                        </h2>
+                        <div class="mx-auto max-w-md overflow-hidden rounded-xl bg-[#DC3545] shadow-md md:max-w-2xl">
+                          <div class="md:flex justify-center items-center align-middle">
+                            <div class="md:shrink-0">
+                              <img class="object-center h-48 w-full object-cover md:h-full md:w-48" src="./img/partners/IndiaTImes.png" alt="Indiatimes Logo" />
+                            </div>
+                            <div class="p-8" style="margin: 8px;">
+                              <div class="text-sm font-semibold text-white tracking-wide uppercase">MEDIA PARTNER - Indiatimes</div>
+                              <p class="mt-2 text-gray-500">Indiatimes, a premium lifestyle brand under Times Internet, empowers and engages young audiences with diverse QYT (Quirky, Young, and Trendy) content...</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="mx-auto max-w-md overflow-hidden rounded-xl bg-[#DC3545] shadow-md md:max-w-2xl mt-4">
+                          <div class="md:flex justify-center items-center align-middle">
+                            <div class="md:shrink-0">
+                              <img class="object-center h-48 w-full object-cover md:h-full md:w-48" src="./img/partners/Nirvair Events.jpeg" alt="Nirvair Events Logo" />
+                            </div>
+                            <div class="p-8" style="margin: 8px;">
+                              <div class="text-sm font-semibold text-white tracking-wide uppercase">EVENT PARTNER - Nirvair Events</div>
+                              <p class="mt-2 text-gray-500">Nirvair Events transmutes visions into reality as a comprehensive event management company. Specializing in weddings, corporate gatherings, concerts...</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="mx-auto max-w-md overflow-hidden rounded-xl bg-[#DC3545] shadow-md md:max-w-2xl mt-4">
+                          <div class="md:flex justify-center items-center align-middle">
+                            <div class="md:shrink-0">
+                              <img class="object-center h-48 w-full object-cover md:h-full md:w-48" src="./img/partners/Nature Fab.jpeg" alt="NatureFab Logo" />
+                            </div>
+                            <div class="p-8" style="margin: 8px;">
+                              <div class="text-sm font-semibold text-white tracking-wide uppercase">MERCHANDISING PARTNER - NatureFab</div>
+                              <p class="mt-2 text-gray-500">NatureFab transforms eco-conscious living through their bamboo fabric clothing collection. Specializing in performance attire—tees, pajamas, and leggings...</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="mx-auto max-w-md overflow-hidden rounded-xl bg-[#DC3545] shadow-md md:max-w-2xl mt-4">
+                          <div class="md:flex justify-center items-center align-middle">
+                            <div class="md:shrink-0">
+                              <img class="object-center h-48 w-full object-cover md:h-full md:w-48" src="./img/partners/Feevin Media (Logo).jpg" alt="Feevin Media Logo" />
+                            </div>
+                            <div class="p-8" style="margin: 8px;">
+                              <div class="text-sm font-semibold text-white tracking-wide uppercase">PUBLIC RELATION PARTNER - Feevin Media</div>
+                              <p class="mt-2 text-gray-500">Feevin Media amplifies TEDxJIMS Rohini’s digital presence through expert content, strategic exposure, and high-quality media coverage...</p>
+                            </div>
+                          </div>
+                        </div>
+                        
 
-
-
+                    </div>
+                </section>
 
             </div>
 
