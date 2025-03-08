@@ -112,14 +112,19 @@
 }
 
 .footerOverlay{
-    background: url('img/bg-img/footer.svg');
+    /* From https://css.glass */
+background: rgba(7, 7, 7, 0.22);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(4.8px);
+-webkit-backdrop-filter: blur(4.8px);
+border-top: 1px solid rgb(255, 254, 254);
 }
 .single-speaker-area:hover{
    box-shadow:  0px 0px 50px #eb002888;
 }
 
 .footerLink,.footerLink:visited{
-    color: #9293bc
+    color: white;
 }
 .footerLink:hover{
     color: #eb0028;

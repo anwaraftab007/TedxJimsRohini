@@ -1312,7 +1312,7 @@ input:required {
 .footer-area {
     position: relative;
     z-index: 1;
-    background-color: #111343;
+    background-color: #E24943;
 }
 
 .footer-area .row {
@@ -1351,7 +1351,7 @@ input:required {
 }
 
 .main-footer-area .single-footer-widget p {
-    color: #9293bc;
+    color: white;
     font-size: 14px;
 }
 
@@ -1481,7 +1481,7 @@ input:required {
 }
 
 .copywrite-content .copywrite-text p {
-    color: #9293bc;
+    color: white;
     font-size: 14px;
     margin-bottom: 0;
 }
@@ -1536,7 +1536,7 @@ input:required {
 }
 
 .copywrite-content .footer-menu .nav li a {
-    color: #9293bc;
+    color: white;
     font-size: 14px;
     font-weight: 400;
 }
