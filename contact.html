@@ -115,8 +115,53 @@
     
     .rfm-child {
         transform: var(--transform);
+        word-wrap: normal;
     }
+    @media (max-width: 768px) {.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Equal spacing between each entry */
+    word-wrap: break-word; /* Ensures long words break to next line */
+    overflow-wrap: break-word; /* Ensures words break properly */
+    white-space: normal; /* Allows wrapping */
+}
+
+.contact-details p {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    margin: 0;
+    flex-wrap: wrap; /* Ensures content wraps properly */
+    max-width: 100%; /* Prevents overflowing horizontally */
+}
+
+.contact-details i {
+    width: 20px;
+    text-align: center;
+    color: white;
+    flex-shrink: 0; /* Prevents icons from resizing */
+}
+
+.contact-details a {
+    color: white;
+    text-decoration: none;
+    word-break: break-word; /* Breaks long URLs */
+    overflow-wrap: break-word;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Prevent horizontal scrolling */
+.contact-right {
+    max-width: 100%;
+    overflow-x: hidden;
+}}
 </style>
+<link rel="stylesheet" href="https://tedx-ravenshaw-v01.netlify.app/css/responsive.css">
+
 <script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/60/2/common.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/60/2/util.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/60/2/map.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/60/2/marker.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/60/2/log.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/60/2/onion.js"></script><script type="text/javascript" charset="UTF-8" src="https://maps.googleapis.com/maps-api-v3/api/js/60/2/controls.js"></script>
 <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

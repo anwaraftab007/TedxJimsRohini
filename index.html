@@ -1,115 +1,247 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="theme-color" content="#eb0028" />
-    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
-    <meta name="description" content="TEDxJIMS Rohini is a platform for inspiring ideas and meaningful connections, fostering transformation under the theme Seeds of Transformation." />
-    <link rel="preconnect" href="https://rsms.me/" />
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-    <link rel="apple-touch-icon" href="/logo192.png" />
-    <link rel="manifest" href="/manifest.json" />
-    <title>TEDx Jims Roshini</title>
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-71BFNS64QK"></script>
-    <script>
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        (window.dataLayer = window.dataLayer || []),
-        gtag("js", new Date()),
-            gtag("config", "G-71BFNS64QK");
-    </script>
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <link rel="stylesheet" href="/style.css" />
-    <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="/custom.css" />
-    <script defer="defer" src="/static/js/main.45a36b3b.js"></script>
-    <link href="/static/css/main.3afd2b22.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="theme-color" content="#eb0028" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+  <meta name="description"
+    content="TEDxJIMS Rohini is a platform for inspiring ideas and meaningful connections, fostering transformation under the theme Seeds of Transformation." />
+  <link rel="preconnect" href="https://rsms.me/" />
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+  <link rel="apple-touch-icon" href="/logo192.png" />
+  <link rel="manifest" href="/manifest.json" />
+  <title>TEDx Jims Roshini</title>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-71BFNS64QK"></script>
+  <script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    (window.dataLayer = window.dataLayer || []),
+      gtag("js", new Date()),
+      gtag("config", "G-71BFNS64QK");
+  </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <link rel="stylesheet" href="/style.css" />
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="/custom.css" />
+  <script defer="defer" src="/static/js/main.45a36b3b.js"></script>
+  <link href="/static/css/main.3afd2b22.css" rel="stylesheet" />
 </head>
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+<style type="text/css">
+  .rfm-marquee-container {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: var(--width);
+    transform: var(--transform);
+  }
+
+  .rfm-marquee-container:hover div {
+    animation-play-state: var(--pause-on-hover);
+  }
+
+  .rfm-marquee-container:active div {
+    animation-play-state: var(--pause-on-click);
+  }
+
+  .rfm-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rfm-overlay::before,
+  .rfm-overlay::after {
+    background: linear-gradient(to right, var(--gradient-color), rgba(255, 255, 255, 0));
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: var(--gradient-width);
+    z-index: 2;
+    pointer-events: none;
+    touch-action: none;
+  }
+
+  .rfm-overlay::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  .rfm-overlay::before {
+    left: 0;
+    top: 0;
+  }
+
+  .rfm-marquee {
+    flex: 0 0 auto;
+    min-width: var(--min-width);
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    animation: scroll var(--duration) linear var(--delay) var(--iteration-count);
+    animation-play-state: var(--play);
+    animation-delay: var(--delay);
+    animation-direction: var(--direction);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0%);
+    }
+
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .rfm-initial-child-container {
+    flex: 0 0 auto;
+    display: flex;
+    min-width: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .rfm-child {
+    transform: var(--transform);
+  }
+
+  .rfm-marquee .slide:hover {
+    --tw-border-spacing-x: 0;
+    --tw-border-spacing-y: 0;
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-rotate: 0;
+    --tw-skew-x: 0;
+    --tw-skew-y: 0;
+    --tw-scale-x: 1;
+    --tw-scale-y: 1;
+    --tw-pan-x: ;
+    --tw-pan-y: ;
+    --tw-pinch-zoom: ;
+    --tw-scroll-snap-strictness: proximity;
+    --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+    --tw-ordinal: ;
+    --tw-slashed-zero: ;
+    --tw-numeric-figure: ;
+    --tw-numeric-spacing: ;
+    --tw-numeric-fraction: ;
+    --tw-ring-inset: ;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-color: rgb(59 130 246 / .5);
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-colored: 0 0 #0000;
+    --tw-blur: ;
+    --tw-brightness: ;
+    --tw-contrast: ;
+    --tw-grayscale: ;
+    --tw-hue-rotate: ;
+    --tw-invert: ;
+    --tw-saturate: ;
+    --tw-sepia: ;
+    --tw-drop-shadow: ;
+    --tw-backdrop-blur: ;
+    --tw-backdrop-brightness: ;
+    --tw-backdrop-contrast: ;
+    --tw-backdrop-grayscale: ;
+    --tw-backdrop-hue-rotate: ;
+    --tw-backdrop-invert: ;
+    --tw-backdrop-opacity: ;
+    --tw-backdrop-saturate: ;
+    --tw-backdrop-sepia: ;
+  }
+</style>
 
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root">
-        <div class="App">
-            <header class="header-area sticky">
-                <div class="classy-nav-container breakpoint-on">
-                    <div class="container">
-                        <nav class="classy-navbar justify-content-between interTypeface" id="conferNav">
-                            <a class="nabarlogo" href="/"><img src="img/core-img/logo-x.png" /></a>
-                            <div class="classy-navbar-toggler">
-                                <span class="navbarToggler"><span></span><span></span><span></span
-                  ></span>
-                            </div>
-                            <div class="classy-menu">
-                                <div class="classycloseIcon">
-                                    <div class="cross-wrap">
-                                        <span class="top"></span><span class="bottom"></span>
-                                    </div>
-                                </div>
-                                <div class="classynav">
-                                    <ul id="nav" class="flex flex-col justify-center items-center">
-                                        <li><a href="index.html">Home</a></li>
-                                        
-                                            <li>
-                                                <a href="/about.html">About </a>
-                                            </li>
-                                        
-                                        
-                                            <li><a href="/speakers.html">Speakers</a></li>
-                                        
-                                        
-                                            <li><a href="/partners.html">Partners</a></li>
-                                        
-                                        
-                                            <li><a href="/contact.html">Contact us</a></li>
-                                       
-                                    </ul>
-                                </div>
-                            </div>
-                        </nav>
-                    </div>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root">
+    <div class="App">
+      <header class="header-area sticky">
+        <div class="classy-nav-container breakpoint-on">
+          <div class="container">
+            <nav class="classy-navbar justify-content-between interTypeface" id="conferNav">
+              <a class="nabarlogo" href="/"><img src="img/core-img/logo-x.png" /></a>
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"><span></span><span></span><span></span></span>
+              </div>
+              <div class="classy-menu">
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
                 </div>
-            </header>
-            <div>
-                <section class="welcome-area" style="display: block !important">
-                    <div class="nextBG">
-                        <iframe src="https://spectacular-cupcake-4659e6.netlify.app/index7" allowfullscreen=""></iframe>
-                    </div>
-                    <div class="single-welcome-slide bg-img bg-overlay jarallax welcomeBG">
-                        <div class="container h-100">
-                            <div class="row h-100 align-items-center">
-                                <div class="col-12">
-                                    <div class="welcome-text-two text-center">
-                                        <h5 data-animation="fadeInUp" data-delay="100ms">
-                                          <span class="theRed"> TEDx</span> JimsRohini 2025
-                                        </h5>
-                                        <h2 data-animation="fadeInUp" data-delay="300ms">
-                                            Seeds
-                                            of Transformation: Cultivating Minds, Connecting Worlds
-                                        </h2>
-                                        <div class="event-meta" data-animation="fadeInUp" data-delay="500ms">
-                                            <a class="event-date" href="/#"> January 12, 2025</a>
-                                        </div>
-                                        <div class="hero-btn-group" data-animation="fadeInUp" data-delay="700ms">
-                                            <a class="btn confer-btn m-2" href="/about.html">
-                          Learn more!
-                          <i class="zmdi zmdi-long-arrow-right"></i
-                        ></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="icon-scroll" id="scrollDown"></div>
-                </section>
+                <div class="classynav">
+                  <ul id="nav" class="flex flex-row justify-center items-center">
+                    <li><a href="index.html">Home</a></li>
 
-                <!-- <section
+                    <li>
+                      <a href="/about.html">About </a>
+                    </li>
+
+
+                    <li><a href="/speakers.html">Speakers</a></li>
+
+
+                    <li><a href="/partners.html">Partners</a></li>
+
+
+                    <li><a href="/contact.html">Contact us</a></li>
+
+                  </ul>
+                </div>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <div>
+        <section class="welcome-area" style="display: block !important">
+          <div class="nextBG">
+            <iframe src="https://spectacular-cupcake-4659e6.netlify.app/index7" allowfullscreen=""></iframe>
+          </div>
+          <div class="single-welcome-slide bg-img bg-overlay jarallax welcomeBG">
+            <div class="container h-100">
+              <div class="row h-100 align-items-center">
+                <div class="col-12">
+                  <div class="welcome-text-two text-center">
+                    <h5 data-animation="fadeInUp" data-delay="100ms">
+                      <span class="theRed"> TEDx</span> JimsRohini 2025
+                    </h5>
+                    <h2 data-animation="fadeInUp" data-delay="300ms">
+                      Seeds
+                      of Transformation: Cultivating Minds, Connecting Worlds
+                    </h2>
+                    <div class="event-meta" data-animation="fadeInUp" data-delay="500ms">
+                      <a class="event-date" href="/#"> January 12, 2025</a>
+                    </div>
+                    <div class="hero-btn-group" data-animation="fadeInUp" data-delay="700ms">
+                      <a class="btn confer-btn m-2" href="/about.html">
+                        Learn more!
+                        <i class="zmdi zmdi-long-arrow-right"></i></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="icon-scroll" id="scrollDown"></div>
+        </section>
+
+        <!-- <section
             class="about-us-countdown-area about-section nextExplainArea" style="display: block !important;"
             id="about"
           >
@@ -187,87 +319,328 @@
               
             </div>
           </section> -->
-                <section class="our-speaker-area bg-img bg-gradient-overlay section-padding-100-60" style="display: block !important">
-                    <section class="" id="about">
-                        <div class="container">
-                            <div class="row align-items-center">
-                                <div class="col-12">
-                                    <div class="about-content-text mb-80 ">
-                                        <h3 class="wow fadeInUp" data-wow-delay="300ms" style="
+        <section class="our-speaker-area bg-img bg-gradient-overlay section-padding-100-60"
+          style="display: block !important">
+          <section class="" id="about">
+            <div class="container">
+              <div class="row align-items-center">
+                <div class="col-12">
+                  <div class="about-content-text mb-80 ">
+                    <h3 class="wow fadeInUp" data-wow-delay="300ms" style="
                           visibility: visible;
                           animation-delay: 300ms;
                           animation-name: fadeInUp;
                           color: whitesmoke;
                         ">
-                                            <span class="theRed"> S</span>eeds
-                                            <span class="theRed"> o</span>f<span class="theRed">
-                        T</span
-                      >ransformation: <span class="theRed"> C</span>ultivating
-                                            <span class="theRed">M</span>inds,
-                                            <span class="theRed"> C</span>onnecting
-                                            <span class="theRed"> W</span>orlds
-                                        </h3>
-                                        <p class="wow fadeInUp" data-wow-delay="300ms" style="
+                      <span class="theRed"> S</span>eeds
+                      <span class="theRed"> o</span>f<span class="theRed">
+                        T</span>ransformation: <span class="theRed"> C</span>ultivating
+                      <span class="theRed">M</span>inds,
+                      <span class="theRed"> C</span>onnecting
+                      <span class="theRed"> W</span>orlds
+                    </h3>
+                    <p class="wow fadeInUp" data-wow-delay="300ms" style="
                           visibility: visible;
                           animation-delay: 300ms;
                           animation-name: fadeInUp;
                           color: whitesmoke !important;
                           text-align: left;
                         ">
-                                            <b>“Seeds”</b> represent the potential within every idea, experience, and perspective. Just like a tiny seed grows into a powerful tree, even the simplest thought can inspire profound change when nurtured.
-                                        </p>
-                                        <p class="wow fadeInUp" data-wow-delay="300ms" style="
+                      <b>“Seeds”</b> represent the potential within every idea, experience, and perspective. Just like a
+                      tiny seed grows into a powerful tree, even the simplest thought can inspire profound change when
+                      nurtured.
+                    </p>
+                    <p class="wow fadeInUp" data-wow-delay="300ms" style="
                           visibility: visible;
                           animation-delay: 300ms;
                           animation-name: fadeInUp;
                           color: whitesmoke !important;
                           text-align: left;
                         ">
-                                            <b>“Transformation” </b>signifies growth, change, and evolution. Whether it’s personal development, societal shifts, or global movements, transformation is the essence of progress. Every TEDx talk is a catalyst
-                                            for transforming how people think, feel, and act.
-                                        </p>
-                                        <p class="wow fadeInUp" data-wow-delay="300ms" style="
+                      <b>“Transformation” </b>signifies growth, change, and evolution. Whether it’s personal
+                      development, societal shifts, or global movements, transformation is the essence of progress.
+                      Every TEDx talk is a catalyst
+                      for transforming how people think, feel, and act.
+                    </p>
+                    <p class="wow fadeInUp" data-wow-delay="300ms" style="
                           visibility: visible;
                           animation-delay: 300ms;
                           animation-name: fadeInUp;
                           color: whitesmoke !important;
                           text-align: left;
                         ">
-                                            <b>“Cultivating Minds”</b> focuses on nurturing curiosity, learning, and critical thinking. Our goal is to inspire fresh perspectives and encourage audiences to explore new ideas beyond their comfort zones.
-                                        </p>
-                                        <p class="wow fadeInUp" data-wow-delay="300ms" style="
+                      <b>“Cultivating Minds”</b> focuses on nurturing curiosity, learning, and critical thinking. Our
+                      goal is to inspire fresh perspectives and encourage audiences to explore new ideas beyond their
+                      comfort zones.
+                    </p>
+                    <p class="wow fadeInUp" data-wow-delay="300ms" style="
                           visibility: visible;
                           animation-delay: 300ms;
                           animation-name: fadeInUp;
                           color: whitesmoke !important;
                           text-align: left;
                         ">
-                                            <b>“Connecting Worlds”</b> celebrates the diversity of thoughts, cultures, experiences, and disciplines. TEDx is a platform that bridges gaps, fosters dialogue, and creates meaningful connections across different
-                                            walks of life.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </section>
-                </section>
-                
+                      <b>“Connecting Worlds”</b> celebrates the diversity of thoughts, cultures, experiences, and
+                      disciplines. TEDx is a platform that bridges gaps, fosters dialogue, and creates meaningful
+                      connections across different
+                      walks of life.
+                    </p>
+                  </div>
+                </div>
+              </div>
 
             </div>
-            <footer class="footer-area bg-img bg-overlay-2">
-              <footer>
-                <div class="footer-top">
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-3 col-sm-3 col-xs-12">
-                        <div class="footer-left">
-                          <div class="single-footer-widget wow fadeInUp" data-wow-delay="300ms" style="
+          </section>
+        </section>
+
+        <div
+          class="bg-gradient-overlay px-4 text-white max-w-[520px]:px-12 lg:px-20 xl:px-40 overflow-x-hidden h-max min-h-screen flex flex-col justify-around items-center  bg-[#121212]">
+          <div
+            class="overflow-x-hidden text-white lg:w-2/3 text-[32px] min-[520px]:text-[50px] lg:text-[70px] 2xl:text-[90px] font-medium text-left ">
+            Sponsors</div>
+          <div class="rfm-marquee-container w-[60%]"
+            style="--pause-on-hover: running; --pause-on-click: running; --width: 80%; --transform: none;">
+            <div class="rfm-marquee"
+              style="--play: running; --direction: normal; --duration: 38.1s; --delay: 0s; --iteration-count: infinite; --min-width: auto;">
+              <div class="rfm-initial-child-container">
+                <div class="rfm-child" style="--transform: none;">
+                  <div class="flex flex-wrap gap-10 p-1">
+                    <div class="relative flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-full">
+                      <div class="relative flex items-center justify-center bg-black rounded-full h-full w-full">
+                        <div class="h-full w-full bg-transparent">
+                          <img src="/images/spons-caprus.png" alt="" class="object-contain w-full h-full">
+                        </div>
+                        <div class="absolute top-0 right-0 w-0 h-0 bg-red-600 rounded-full 
+                                                  transition-all duration-500 ease-in-out 
+                                                  group-hover:w-[250px] group-hover:h-[250px]">
+                        </div>
+                      </div>
+                      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                              text-white text-lg font-bold opacity-0 transition-opacity 
+                                              duration-300 group-hover:opacity-100">
+                        Caprus
+                      </div>
+                    </div>
+
+                    <!-- Lloyd -->
+                    <div class="relative flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-full">
+                      <div class="relative flex items-center justify-center bg-black rounded-full h-full w-full">
+                        <div class="h-full w-full bg-transparent">
+                          <img src="/images/spons-lloyd.png" alt="" class="object-contain w-full h-full">
+                        </div>
+                        <div class="absolute top-0 right-0 w-0 h-0 bg-red-600 rounded-full 
+                                                  transition-all duration-500 ease-in-out 
+                                                  group-hover:w-[250px] group-hover:h-[250px]">
+                        </div>
+                      </div>
+                      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                              text-white text-lg font-bold opacity-0 transition-opacity 
+                                              duration-300 group-hover:opacity-100">
+                        Lloyd
+                      </div>
+                    </div>
+
+                    <!-- NTV -->
+                    <div class="relative flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-full">
+                      <div class="relative flex items-center justify-center bg-black rounded-full h-full w-full">
+                        <div class="h-full w-full bg-transparent">
+                          <img src="/images/spons-ntv.png" alt="" class="object-contain w-full h-full">
+                        </div>
+                        <div class="absolute top-0 right-0 w-0 h-0 bg-red-600 rounded-full 
+                                                  transition-all duration-500 ease-in-out 
+                                                  group-hover:w-[250px] group-hover:h-[250px]">
+                        </div>
+                      </div>
+                      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                              text-white text-lg font-bold opacity-0 transition-opacity 
+                                              duration-300 group-hover:opacity-100">
+                        NTV
+                      </div>
+                    </div>
+
+                    <!-- ElitCeler -->
+                    <div class="relative flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-full">
+                      <div class="relative flex items-center justify-center bg-black rounded-full h-full w-full">
+                        <div class="h-full w-full bg-transparent">
+                          <img src="/images/spons-elit.png" alt="" class="object-contain w-full h-full">
+                        </div>
+                        <div class="absolute top-0 right-0 w-0 h-0 bg-red-600 rounded-full 
+                                                  transition-all duration-500 ease-in-out 
+                                                  group-hover:w-[250px] group-hover:h-[250px]">
+                        </div>
+                      </div>
+                      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                              text-white text-lg font-bold opacity-0 transition-opacity 
+                                              duration-300 group-hover:opacity-100">
+                        ElitCeler
+                      </div>
+                    </div>
+
+                    <!-- Suzuki Innovation Centre -->
+                    <div class="relative flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-full">
+                      <div class="relative flex items-center justify-center bg-black rounded-full h-full w-full">
+                        <div class="h-full w-full bg-transparent">
+                          <img src="/images/spons-sic.png" alt="" class="object-contain w-full h-full">
+                        </div>
+                        <div class="absolute top-0 right-0 w-0 h-0 bg-red-600 rounded-full 
+                                                  transition-all duration-500 ease-in-out 
+                                                  group-hover:w-[250px] group-hover:h-[250px]">
+                        </div>
+                      </div>
+                      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                              text-white text-lg font-bold opacity-0 transition-opacity 
+                                              duration-300 group-hover:opacity-100">
+                        Suzuki Innovation Centre
+                      </div>
+                    </div>
+
+                    <!-- Heylin Spark -->
+                    <div class="relative flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-full">
+                      <div class="relative flex items-center justify-center bg-black rounded-full h-full w-full">
+                        <div class="h-full w-full bg-transparent">
+                          <img src="/images/spons-heylin.png" alt="" class="object-contain w-full h-full">
+                        </div>
+                        <div class="absolute top-0 right-0 w-0 h-0 bg-red-600 rounded-full 
+                                                  transition-all duration-500 ease-in-out 
+                                                  group-hover:w-[250px] group-hover:h-[250px]">
+                        </div>
+                      </div>
+                      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                              text-white text-lg font-bold opacity-0 transition-opacity 
+                                              duration-300 group-hover:opacity-100">
+                        Heylin Spark
+                      </div>
+                    </div>
+
+                    <!-- Manya Group -->
+                    <div class="relative flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-full">
+                      <div class="relative flex items-center justify-center bg-black rounded-full h-full w-full">
+                        <div class="h-full w-full bg-transparent">
+                          <img src="/images/spons-Manya.png" alt="" class="object-contain w-full h-full">
+                        </div>
+                        <div class="absolute top-0 right-0 w-0 h-0 bg-red-600 rounded-full 
+                                                  transition-all duration-500 ease-in-out 
+                                                  group-hover:w-[250px] group-hover:h-[250px]">
+                        </div>
+                      </div>
+                      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                              text-white text-lg font-bold opacity-0 transition-opacity 
+                                              duration-300 group-hover:opacity-100">
+                        Manya Group
+                      </div>
+                    </div>
+
+                    <!-- Remit2Any -->
+                    <div class="relative flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-full">
+                      <div class="relative flex items-center justify-center bg-black rounded-full h-full w-full">
+                        <div class="h-full w-full bg-transparent">
+                          <img src="/images/spons-remit.png" alt="" class="object-contain w-full h-full">
+                        </div>
+                        <div class="absolute top-0 right-0 w-0 h-0 bg-red-600 rounded-full 
+                                                  transition-all duration-500 ease-in-out 
+                                                  group-hover:w-[250px] group-hover:h-[250px]">
+                        </div>
+                      </div>
+                      <div class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 
+                                              text-white text-lg font-bold opacity-0 transition-opacity 
+                                              duration-300 group-hover:opacity-100">
+                        Remit2Any
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="rfm-marquee"
+              style="--play: running; --direction: normal; --duration: 38.1s; --delay: 0s; --iteration-count: infinite; --min-width: auto;">
+              <div class="rfm-child" style="--transform: none;">
+                <div class="pt-10 flex flex-wrap gap-10 p-1">
+                  <div class="flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-[50%]">
+                    <div class="bg-black rounded-[50%] h-[200px] w-[200px] items-center">
+                      <div class="h-[200px] w-[200px] bg-transparent">
+                        <img src="/images/spons-caprus.png" alt="" class="object-contain w-full h-full aspect-video">
+                      </div>
+                      <div
+                        class="z-10 translate-x-full -translate-y-[200%] toHide transition-transform duration-500 ease-in-out h-[200px] w-[200px] rounded-[50%] group-hover:translate-x-[0] group-hover:translate-y-[-100%] bg-tedred">
+                      </div>
+                    </div>
+                    <div
+                      class="relative left-[-50%] top-[50%] -translate-x-1/2 -translate-y-1/2 h-max z-[1000] group-hover:inline-block hidden text-center text-white">
+                      Caprus</div>
+                  </div>
+
+                  <div class="flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-[50%]">
+                    <div class="bg-black rounded-[50%] h-[200px] w-[200px] items-center">
+                      <div class="h-[200px] w-[200px] bg-transparent">
+                        <img src="/images/spons-lloyd.png" alt="" class="object-contain w-full h-full aspect-video">
+                      </div>
+                      <div
+                        class="z-10 translate-x-full -translate-y-[200%] toHide transition-transform duration-500 ease-in-out h-[200px] w-[200px] rounded-[50%] group-hover:translate-x-[0] group-hover:translate-y-[-100%] bg-tedred">
+                      </div>
+                    </div>
+                    <div
+                      class="relative left-[-50%] top-[50%] -translate-x-1/2 -translate-y-1/2 h-max z-[1000] group-hover:inline-block hidden text-center text-white">
+                      Lloyd</div>
+                  </div>
+
+                  <div class="flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-[50%]">
+                    <div class="bg-black rounded-[50%] h-[200px] w-[200px] items-center">
+                      <div class="h-[200px] w-[200px] bg-transparent">
+                        <img src="/images/spons-ntv.png" alt="" class="object-contain w-full h-full aspect-video">
+                      </div>
+                      <div
+                        class="z-10 translate-x-full -translate-y-[200%] toHide transition-transform duration-500 ease-in-out h-[200px] w-[200px] rounded-[50%] group-hover:translate-x-[0] group-hover:translate-y-[-100%] bg-tedred">
+                      </div>
+                    </div>
+                    <div
+                      class="relative left-[-50%] top-[50%] -translate-x-1/2 -translate-y-1/2 h-max z-[1000] group-hover:inline-block hidden text-center text-white">
+                      NTV</div>
+                  </div>
+
+                  <div class="flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-[50%]">
+                    <div class="bg-black rounded-[50%] h-[200px] w-[200px] items-center">
+                      <div class="h-[200px] w-[200px] bg-transparent">
+                        <img src="/images/spons-elit.png" alt="" class="object-contain w-full h-full aspect-video">
+                      </div>
+                      <div
+                        class="z-10 translate-x-full -translate-y-[200%] toHide transition-transform duration-500 ease-in-out h-[200px] w-[200px] rounded-[50%] group-hover:translate-x-[0] group-hover:translate-y-[-100%] bg-tedred">
+                      </div>
+                    </div>
+                    <div
+                      class="relative left-[-50%] top-[50%] -translate-x-1/2 -translate-y-1/2 h-max z-[1000] group-hover:inline-block hidden text-center text-white">
+                      ElitCeler</div>
+                  </div>
+
+                  <div class="flex group h-[200px] w-[200px] overflow-hidden mx-5 rounded-[50%]">
+                    <div class="bg-black rounded-[50%] h-[200px] w-[200px] items-center">
+                      <div class="h-[200px] w-[200px] bg-transparent">
+                        <img src="/images/spons-sic.png" alt="" class="object-contain w-full h-full aspect-video">
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
+        </div>
+        </div>
+          <footer class="footer-area bg-img bg-overlay-2">
+            <footer>
+              <div class="footer-top">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                      <div class="footer-left">
+                        <div class="single-footer-widget wow fadeInUp" data-wow-delay="300ms" style="
                         animation-delay: 300ms;
                         animation-name: none;
                       ">
-                                      <a href="#" class="footer-logo"><img src="img/core-img/logo.png" /></a>
-                                      <!-- <div class="social-info">
+                          <a href="#" class="footer-logo"><img src="img/core-img/logo.png" /></a>
+                          <!-- <div class="social-info">
                         <a
                           href="https://www.facebook.com/TEDxIIMBangalore"
                           target="blank"
@@ -284,47 +657,48 @@
                           ><i class="zmdi zmdi-linkedin"></i
                         ></a>
                       </div> -->
-                                  </div>
                         </div>
                       </div>
-                      <div class="col-md-9 col-sm-9 col-xs-12">
-                        <div class="footer-right hidden-xs">
-                          <ul>
-                            <li><a href="/index.html">Home</a><span>|</span></li>
-                            <li><a href="/about.html">About</a><span>|</span></li>
-                            <li><a href="/speakers.html">Speakers</a><span>|</span></li>
-                            <li><a href="/partners.html">Partners</a><span>|</span></li>
-                            <li><a href="/contact.html">Contacts</a></li>   
-               
-                           
-                          </ul>
-                        </div>
+                    </div>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                      <div class="footer-right hidden-xs">
+                        <ul>
+                          <li><a href="/index.html">Home</a><span>|</span></li>
+                          <li><a href="/about.html">About</a><span>|</span></li>
+                          <li><a href="/speakers.html">Speakers</a><span>|</span></li>
+                          <li><a href="/partners.html">Partners</a><span>|</span></li>
+                          <li><a href="/contact.html">Contacts</a></li>
+
+
+                        </ul>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="footer-bottom">
-                  <div class="copytight">
-                    <p>Copyright © 2024 All rights reserved
-                   <br>   Design and Developed&nbsp;by&nbsp;<span class="strng">&nbsp;Feevin&nbsp;Media</span></p>
-                  </div>
+              </div>
+              <div class="footer-bottom">
+                <div class="copytight">
+                  <p>Copyright © 2024 All rights reserved
+                    <br> Design and Developed&nbsp;by&nbsp;<span class="strng">&nbsp;Feevin&nbsp;Media</span>
+                  </p>
                 </div>
-                <a href="#" id="back-to-top" title="Back to top" class="show">↑</a> 
-              </footer>
-        </footer>
+              </div>
+              <a href="#" id="back-to-top" title="Back to top" class="show">↑</a>
+            </footer>
+          </footer>
+        </div>
       </div>
-    </div>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/confer.bundle.js"></script>
-    <script src="/js/default-assets/active.js"></script>
-    
-                                            <script>
-                                                function initResponsiveNav() {
-                                                    $("#conferNav").classyNav();
-                                                }
-                                            </script>
+      <script src="/js/jquery.min.js"></script>
+      <script src="/js/popper.min.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
+      <script src="/js/confer.bundle.js"></script>
+      <script src="/js/default-assets/active.js"></script>
+
+      <script>
+        function initResponsiveNav() {
+          $("#conferNav").classyNav();
+        }
+      </script>
 </body>
 
 </html>
