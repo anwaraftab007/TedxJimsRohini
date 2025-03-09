@@ -1265,10 +1265,21 @@ input:required {
     /* text-transform: uppercase; */
     font-weight: 700;
 }
+.single-welcome-slide .welcome-text-two h3 {
+    font-size: 42px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+    font-family: "Inter", sans-serif;
+    /* text-transform: uppercase; */
+    font-weight: 700;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
     .single-welcome-slide .welcome-text-two h2 {
         font-size: 62px;
+    }
+    .single-welcome-slide .welcome-text-two h3 {
+        font-size: 42px;
     }
 }
 
@@ -1276,11 +1287,17 @@ input:required {
     .single-welcome-slide .welcome-text-two h2 {
         font-size: 30px;
     }
+    .single-welcome-slide .welcome-text-two h3 {
+        font-size: 20px;
+    }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     .single-welcome-slide .welcome-text-two h2 {
         font-size: 42px;
+    }
+    .single-welcome-slide .welcome-text-two h3 {
+        font-size: 34px;
     }
 }
 
