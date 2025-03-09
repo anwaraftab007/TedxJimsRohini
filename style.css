@@ -1518,6 +1518,9 @@ input:required {
     -ms-flex-pack: end;
     justify-content: flex-end;
 }
+.copytight, footer-right ul li{
+    font-family: "Poppins", sans-serif;
+}
 
 @media only screen and (max-width: 767px) {
     .copywrite-content .footer-menu .nav {
