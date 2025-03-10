@@ -395,7 +395,298 @@
               </div>
 
             </div>
+
+            <style>
+              @media (min-width: 768px)  {
+    .st-slider {
+        display: none;
+    }
+    
+}
+@media (max-width: 768px) {
+    .lg-slider {
+        display: none;
+    }
+}
+
+            </style>
+            
+            <style>
+              .speaker-block {
+                  position: relative;
+              }
+              
+              .overlay-box {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  right: 0;
+                  bottom: 0;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  background: rgba(0, 0, 0, 0.5);
+                  opacity: 0;
+                  transition: opacity 0.3s ease-in-out;
+              }
+              
+              .image-box:hover .overlay-box {
+                  opacity: 1;
+              }
+              
+              .read-more-btn {
+                  display: none;
+                  /* Hidden by default */
+                  background-color: #ffffff;
+                  color: #000;
+                  padding: 10px 20px;
+                  font-size: 16px;
+                  border: none;
+                  cursor: pointer;
+                  border-radius: 5px;
+                  transition: opacity 0.3s ease-in-out;
+              }
+              
+              .image-box:hover .read-more-btn {
+                  display: inline-block;
+              }
+              
+              .ts-speaker-popup-img img {
+                  width: 100%;
+                  height: auto;
+              }
+              
+              .ts-speaker-popup-content {
+                  padding: 20px;
+              }
+              
+              .modal-content {
+                  border-radius: 8px;
+                  overflow: hidden;
+              }
+          </style>
+            <div class="container flex flex-col justify-center items-center gap-y-12" style="padding-top: 45px !important;">
+              <div class="relative">
+                  <div class="margin" style="height: 55px;">
+
+                  </div>
+              </div>
+              <h2 class="c-title-1">
+                  Sponsors
+              </h2>
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:max-w-[90%] lg-sldier">
+                <div class="bg-[#DC3545] rounded-lg shadow-md p-2 hover:shadow-lg transition duration-300 ">
+                  <img class="w-full h-48 object-cover rounded-md" src="./img/partners/IndiaTImes.png" alt="Indiatimes Logo" style="margin-bottom: 12px;">
+               </div>
+                
+                <div class="bg-[#DC3545] rounded-lg shadow-md p-2 hover:shadow-lg transition duration-300 ">
+                  <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Nirvair Events.jpeg" alt="Nirvair Events Logo" style="margin-bottom: 12px;">
+                </div>
+                
+                <div class="bg-[#DC3545] rounded-lg shadow-md p-2 hover:shadow-lg transition duration-300 ">
+                  <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Nature Fab.jpeg" alt="NatureFab Logo" style="margin-bottom: 12px;">
+                </div>
+                
+                <div class="bg-[#DC3545] rounded-lg shadow-md p-2 hover:shadow-lg transition duration-300 ">
+                  <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Feevin Media (Logo).jpg" alt="Feevin Media Logo" style="margin-bottom: 12px;">
+                </div>
+              </div>
+              <div id="homepage-slider" class="st-slider">
+
+                <input type="radio" class="cs_anchor radio" name="slider" id="slide1"/>
+                <input type="radio" class="cs_anchor radio" name="slider" id="slide2"/>
+                <input type="radio" class="cs_anchor radio" name="slider" id="slide3"/>
+                <input type="radio" class="cs_anchor radio" name="slider" id="play1" checked=""/>
+            
+                <div class="images p-4 ">
+                   <div class="images-inner">
+                    <div class="image-slide bg-red-600 p-2 m-2 border-red-700">
+                      <img class="w-full h-48 object-cover rounded-md" src="./img/partners/IndiaTImes.png" alt="Indiatimes Logo" style="margin-bottom: 12px;">
+                                        
+                    </div>
+                    <div class="image-slide bg-red-600 p-2 m-2 border-red-700">
+                      <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Nirvair Events.jpeg" alt="Nirvair Events Logo" style="margin-bottom: 12px;">
+                                        
+                    </div>
+                    <div class="image-slide bg-red-600 p-2 m-2 border-red-700">
+                      <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Nature Fab.jpeg" alt="NatureFab Logo" style="margin-bottom: 12px;">
+                    </div>
+                    <div class="image-slide bg-red-600 p-2 m-2 border-red-700">
+                      <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Feevin Media (Logo).jpg" alt="Feevin Media Logo" style="margin-bottom: 12px;">
+                                       </div>
+            
+                  </div>
+                </div>
+            </div>
+              
+
+          </div>
+
+
+<style>
+  .image {
+  width: 100%;
+  height: 200px;
+}
+.radio {
+  /*display: none;*/
+}
+.images {
+  overflow: hidden;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.images-inner {
+  width: 500%;
+  transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+.image-slide {
+  width: 20%;
+  float: left;
+}
+.image-slide,
+.fake-radio,
+.radio-btn {
+  transition: all 0.5s ease-out;
+}
+.fake-radio {
+  float: right;
+}
+
+
+
+
+/* Move slides overflowed container */
+#slide1:checked ~ .images .images-inner {
+  margin-left: 0;
+}
+#slide2:checked ~ .images .images-inner {
+  margin-left: -100%;
+}
+#slide3:checked ~ .images .images-inner {
+  margin-left: -200%;
+}
+
+
+
+
+/* Color of bullets */
+#slide1:checked ~ div .fake-radio .radio-btn:nth-child(1),
+#slide2:checked ~ div .fake-radio .radio-btn:nth-child(2),
+#slide3:checked ~ div .fake-radio .radio-btn:nth-child(3) {
+  background: red;
+}
+.radio-btn {
+  width: 9px;
+  height: 9px;
+  border-radius: 5px;
+  background: gray;
+  display: inline-block !important;
+  margin: 0 1px;
+  cursor: pointer;
+}
+/* Color of bullets - END */
+
+
+
+
+/* Text of slides */
+#slide1:checked ~ .labels .label:nth-child(1),
+#slide2:checked ~ .labels .label:nth-child(2),
+#slide3:checked ~ .labels .label:nth-child(3) {
+  opacity: 1;
+}
+
+.label {
+  opacity: 0;
+  position: absolute;
+}
+/* Text of slides - END */
+
+
+
+/* Calculate AUTOPLAY for BULLETS */
+@keyframes bullet {
+  0%, 33.32333333333334%	{
+    background: red;
+  }
+  33.333333333333336%, 100% {
+    background: gray;
+  }
+}
+
+
+#play1:checked ~ div .fake-radio .radio-btn:nth-child(1) {
+  animation: bullet 12300ms infinite -1000ms;
+}
+
+#play1:checked ~ div .fake-radio .radio-btn:nth-child(2) {
+  animation: bullet 12300ms infinite 3100ms;	
+}
+
+#play1:checked ~ div .fake-radio .radio-btn:nth-child(3) {
+  animation: bullet 12300ms infinite 7200ms;	
+}
+/* Calculate AUTOPLAY for BULLETS - END */
+
+
+
+
+/* Calculate AUTOPLAY for SLIDES */
+@keyframes slide {
+  0%, 25.203252032520325%	{ margin-left: 0; }
+  33.333333333333336%, 58.53658536585366%	{ margin-left: -100%; }
+  66.66666666666667%, 91.869918699187%	{ margin-left: -200%; }
+}
+
+
+.st-slider > #play1:checked ~ .images .images-inner {
+  animation: slide 12300ms infinite;	
+}
+/* Calculate AUTOPLAY for SLIDES - END */
+
+
+
+
+
+/* Calculate AUTOPLAY for CAPTION */
+@keyframes caption {
+  0%, 33.32333333333334%	{
+    opacity: 1;
+  }
+  33.333333333333336%, 100% {
+    opacity: 0;
+  }
+}
+
+
+#play1:checked ~ .labels .label:nth-child(1) {
+  animation: caption 12300ms infinite -1000ms;
+}
+
+#play1:checked ~ .labels .label:nth-child(2) {
+  animation: caption 12300ms infinite 3100ms;	
+}
+
+#play1:checked ~ .labels .label:nth-child(3) {
+  animation: caption 12300ms infinite 7200ms;	
+}
+/* Calculate AUTOPLAY for CAPTION - END */
+
+
+
+</style>
+            
           </section>
+          
+<div class="container bg-img bg-gradient-overlay">
+
+</div>
+
           
         </section>
 
