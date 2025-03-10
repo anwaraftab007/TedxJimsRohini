@@ -397,21 +397,6 @@
             </div>
 
             <style>
-              @media (min-width: 768px)  {
-    .st-slider {
-        display: none;
-    }
-    
-}
-@media (max-width: 768px) {
-    .lg-slider {
-        display: none;
-    }
-}
-
-            </style>
-            
-            <style>
               .speaker-block {
                   position: relative;
               }
@@ -465,16 +450,37 @@
                   overflow: hidden;
               }
           </style>
-            <div class="container flex flex-col justify-center items-center gap-y-12" style="padding-top: 45px !important;">
+            <style>
+              @media (min-width: 768px)  {
+    .st-slider {
+        display: none;
+    }
+    
+}
+@media (max-width: 768px) {
+    .lg-slider {
+        display: none !important;
+    }
+}
+
+            </style>
+            
+            <div class="container flex flex-col justify-center items-center gap-y-12" style="padding-bottom: 45px !important;">
               <div class="relative">
                   <div class="margin" style="height: 55px;">
 
                   </div>
               </div>
-              <h2 class="c-title-1">
+              <h2 class="wow fadeInUp text-lg" data-wow-delay="300ms" style="
+                          visibility: visible;
+                          animation-delay: 300ms;
+                          animation-name: fadeInUp;
+                          color: whitesmoke;
+                          font-size: 40px;
+                        ">
                   Sponsors
               </h2>
-              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:max-w-[90%] lg-sldier">
+              <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:max-w-[90%] lg-slider">
                 <div class="bg-[#DC3545] rounded-lg shadow-md p-2 hover:shadow-lg transition duration-300 ">
                   <img class="w-full h-48 object-cover rounded-md" src="./img/partners/IndiaTImes.png" alt="Indiatimes Logo" style="margin-bottom: 12px;">
                </div>
