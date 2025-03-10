@@ -477,6 +477,7 @@
                           animation-name: fadeInUp;
                           color: whitesmoke;
                           font-size: 40px;
+                          padding-bottom: 6px;
                         ">
                   Sponsors
               </h2>
@@ -502,24 +503,28 @@
                 <input type="radio" class="cs_anchor radio" name="slider" id="slide1"/>
                 <input type="radio" class="cs_anchor radio" name="slider" id="slide2"/>
                 <input type="radio" class="cs_anchor radio" name="slider" id="slide3"/>
+                
+                <input type="radio" class="cs_anchor radio" name="slider" id="slide4"/>
                 <input type="radio" class="cs_anchor radio" name="slider" id="play1" checked=""/>
             
                 <div class="images p-4 ">
                    <div class="images-inner">
                     <div class="image-slide bg-red-600 p-2 m-2 border-red-700">
-                      <img class="w-full h-48 object-cover rounded-md" src="./img/partners/IndiaTImes.png" alt="Indiatimes Logo" style="margin-bottom: 12px;">
+                      <img class="w-full h-48 object-cover rounded-md " src="./img/partners/IndiaTImes.png" alt="Indiatimes Logo" style="margin-bottom: 12px;">
                                         
                     </div>
                     <div class="image-slide bg-red-600 p-2 m-2 border-red-700">
-                      <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Nirvair Events.jpeg" alt="Nirvair Events Logo" style="margin-bottom: 12px;">
+                      <img class="w-full h-48 object-cover rounded-md " src="./img/partners/Nirvair Events.jpeg" alt="Nirvair Events Logo" style="margin-bottom: 12px;">
                                         
                     </div>
                     <div class="image-slide bg-red-600 p-2 m-2 border-red-700">
-                      <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Nature Fab.jpeg" alt="NatureFab Logo" style="margin-bottom: 12px;">
+                      <img class="w-full h-48 object-cover rounded-md " src="./img/partners/Nature Fab.jpeg" alt="NatureFab Logo" style="margin-bottom: 12px;">
                     </div>
                     <div class="image-slide bg-red-600 p-2 m-2 border-red-700">
-                      <img class="w-full h-48 object-cover rounded-md" src="./img/partners/Feevin Media (Logo).jpg" alt="Feevin Media Logo" style="margin-bottom: 12px;">
+                      <img class="w-full h-48 object-cover rounded-md " src="./img/partners/Feevin Media (Logo).jpg" alt="Feevin Media Logo" style="margin-bottom: 12px;">
                                        </div>
+                                       
+                                       
             
                   </div>
                 </div>
@@ -577,13 +582,22 @@
   margin-left: -200%;
 }
 
+#slide4:checked ~ .images .images-inner {
+  margin-left: -200%;
+}
+
+#slide4:checked ~ .images .images-inner {
+  margin-left: -300%;
+}
+
 
 
 
 /* Color of bullets */
 #slide1:checked ~ div .fake-radio .radio-btn:nth-child(1),
 #slide2:checked ~ div .fake-radio .radio-btn:nth-child(2),
-#slide3:checked ~ div .fake-radio .radio-btn:nth-child(3) {
+#slide3:checked ~ div .fake-radio .radio-btn:nth-child(3) 
+#slide3:checked ~ div .fake-radio .radio-btn:nth-child(4) {
   background: red;
 }
 .radio-btn {
@@ -637,6 +651,9 @@
 #play1:checked ~ div .fake-radio .radio-btn:nth-child(3) {
   animation: bullet 12300ms infinite 7200ms;	
 }
+#play1:checked ~ div .fake-radio .radio-btn:nth-child(4) {
+  animation: bullet 12300ms infinite 12300ms;	
+}
 /* Calculate AUTOPLAY for BULLETS - END */
 
 
@@ -644,10 +661,13 @@
 
 /* Calculate AUTOPLAY for SLIDES */
 @keyframes slide {
-  0%, 25.203252032520325%	{ margin-left: 0; }
-  33.333333333333336%, 58.53658536585366%	{ margin-left: -100%; }
-  66.66666666666667%, 91.869918699187%	{ margin-left: -200%; }
+  0%, 20.27027027027027%   { margin-left: 0; }       /* Slide 1 */
+  27.02702702702703%, 47.2972972972973%  { margin-left: -100%; }  /* Slide 2 */
+  54.054054054054056%, 74.32432432432432% { margin-left: -200%; } /* Slide 3 */
+  81.08108108108108%, 94.2323525%  { margin-left: -300%; }
+  100%      { margin-left: 0; }  /* Slide 4 */
 }
+
 
 
 .st-slider > #play1:checked ~ .images .images-inner {
@@ -679,6 +699,10 @@
 }
 
 #play1:checked ~ .labels .label:nth-child(3) {
+  animation: caption 12300ms infinite 7200ms;	
+}
+
+#play1:checked ~ .labels .label:nth-child(4) {
   animation: caption 12300ms infinite 7200ms;	
 }
 /* Calculate AUTOPLAY for CAPTION - END */
